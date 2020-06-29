@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>VIT Cafe</title>
+	<link rel="stylesheet" href="../CSS files/main.css">
+	<link rel="stylesheet" href="../CSS files/orderstyling.css">
+	<?php session_start();?>
+</head>
+
+<body>
+
+		<!--The header of the all the pages with all the styling in the main css file -->
+        <div class="header1">      
+                <a href="online.html">
+                    <p id="title"> <img src="../images/icon.jpg"  id="icon">VIT Cafe</p>
+                </a>
+        </div>
+
+
+        <!--The Navigation with links to three pages of the website under the class menu-bar.-->
+        <nav class="menu-bar" >
+            <a href="online.html">Home</a> &nbsp; &nbsp;
+            <a href="../PHPproj/logout.php">Hi <?php echo($_SESSION["username"]);?>, Logout</a> &nbsp; 
+        </nav>   
+		
+		
+		<form name="order" action="../PHPproj/order.php" method="post">
+		
+			<p class="ordhead"><b>Our Exclusive Menu</b></p>
+			<input type="submit" class="ordsub" value="Place Order">
+			<p class="subhead">Sandwiches</p>
+			<div class="ordbox">
+			<img class="ordimg" src="../images/sandwich1.jpg">
+			<p class="s1">Crispy Tofu Sandwich</p>
+			<p class="s1">Rs 80</p>
+			<input type="number" name="p01" min="0" value="0">
+			</div>
+			<div class="ordbox">
+			<img class="ordimg" src="../images/sandwich2.jpg">
+			<p class="s1">Bourbon Mango Squash</p>
+			<p class="s1">Rs 100</p>
+			<input type="number" name="p02" min="0" value="0">
+			</div>
+			<div class="ordbox">
+			<img class="ordimg" src="../images/sandwich3.jpg">
+			<p class="s1">Shiitake Panini</p>
+			<p class="s1">Rs 90</p>
+			<input type="number" name="p03" min="0" value="0">
+			</div>
+			<div class="ordbox">
+			<img class="ordimg" src="../images/sandwich4.jpg">
+			<p class="s1">Southwestern Veggie Wraps</p>
+			<p class="s1">Rs 110</p>
+			<input type="number" name="p04" min="0" value="0">
+			</div>
+			<div class="ordbox">
+			<img class="ordimg" src="../images/sandwich5.jpg">
+			<p class="s1">Veggie & Tempeh Sloppy Joes</p>
+			<p class="s1">Rs 120</p>
+			<input type="number" name="p05" min="0" value="0">
+			</div>
+			<p class="subhead">Chaat</p>
+			<div class="ordbox">
+			<img class="ordimg" src="../images/bhelpuri.jpg">
+			<p class="s1">Bhel Puri</p>
+			<p class="s1">Rs 40</p>
+			<input type="number" name="p06" min="0" value="0">
+			</div>
+			<div class="ordbox">
+			<img class="ordimg" src="../images/panipuri.jpg">
+			<p class="s1">Pani Puri</p>
+			<p class="s1">Rs 30</p>
+			<input type="number" name="p07" min="0" value="0">
+			</div>
+			<div class="ordbox">
+			<img class="ordimg" src="../images/dahipapdi.jpg">
+			<p class="s1">Dahi Papdi Chaat</p>
+			<p class="s1">Rs 50</p>
+			<input type="number" name="p08" min="0" value="0">
+			</div>
+			<div class="ordbox">
+			<img class="ordimg" src="../images/sevpuri.jpg">
+			<p class="s1">Sev Puri</p>
+			<p class="s1">Rs 50</p>
+			<input type="number" name="p09" min="0" value="0">
+			</div>
+			<div class="ordbox">
+			<img class="ordimg" src="../images/samosachaat.jpg">
+			<p class="s1">Samosa Chaat</p>
+			<p class="s1">Rs 50</p>
+			<input type="number" name="p10" min="0" value="0">
+			</div>
+			<p class="subhead">Drinks</p>
+			<div class="ordbox">
+			<img class="ordimg" src="../images/mintmojito.jpg">
+			<p class="s1">Mint Mojito</p>
+			<p class="s1">Rs 100</p>
+			<input type="number" name="p11" min="0" value="0">
+			</div>
+			<div class="ordbox">
+			<img class="ordimg" src="../images/icetea.jpg">
+			<p class="s1">Peach Ice Tea</p>
+			<p class="s1">Rs 120</p>
+			<input type="number" name="p12" min="0" value="0">
+			</div>
+			<div class="ordbox">
+			<img class="ordimg" src="../images/naragi.jpg">
+			<p class="s1">Naranga Juice</p>
+			<p class="s1">Rs 110</p>
+			<input type="number" name="p13" min="0" value="0">
+			</div>
+			<div class="ordbox">
+			<img class="ordimg" src="../images/momsrecipe.jpg">
+			<p class="s1">Moms Recipe</p>
+			<p class="s1">Rs 150</p>
+			<input type="number" name="p14" min="0" value="0">
+			</div>
+			<div class="ordbox">
+			<img class="ordimg" src="../images/watermelon.jpg">
+			<p class="s1">Watermelon Juice</p>
+			<p class="s1">Rs 70</p>
+			<input type="number" name="p15" min="0" value="0">
+			</div>
+			<p class="subhead">Thick Shakes</p>
+			<div class="ordbox">
+			<img class="ordimg" src="../images/vanilla.jpg">
+			<p class="s1">Vanilla</p>
+			<p class="s1">Rs 130</p>
+			<input type="number" name="p16" min="0" value="0">
+			</div>
+			<div class="ordbox">
+			<img class="ordimg" src="../images/chocolate.jpg">
+			<p class="s1">Chocolate</p>
+			<p class="s1">Rs 150</p>
+			<input type="number" name="p17" min="0" value="0">
+			</div>
+			<div class="ordbox">
+			<img class="ordimg" src="../images/strawberry.jpg">
+			<p class="s1">Strawberry</p>
+			<p class="s1">Rs 140</p>
+			<input type="number" name="p18" min="0" value="0">
+			</div>
+			<div class="ordbox">
+			<img class="ordimg" src="../images/butterscotch.jpg">
+			<p class="s1">Butterscotch</p>
+			<p class="s1">Rs 160</p>
+			<input type="number" name="p19" min="0" value="0">
+			</div>
+			<div class="ordbox">
+			<img class="ordimg" src="../images/oreoshake.jpg">
+			<p class="s1">Oreo Shake</p>
+			<p class="s1">Rs 180</p>
+			<input type="number" name="p20" min="0" value="0">
+			</div>
+			
+		</form>
+	
+</body>
+</html>

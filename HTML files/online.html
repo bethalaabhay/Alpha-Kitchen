@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>VIT Cafe</title>
+        <link rel="stylesheet" href="../CSS files/main.css">
+        <link rel="stylesheet" href="../CSS files/formstyling.css">
+		<link rel="stylesheet" href="../CSS files/signupstyling.css">
+        <?php session_start()?>
+    </head>
+
+
+    <script>
+
+		function signupenable()
+		{
+			document.getElementById('id01').style.display='none';
+			document.getElementById('id02').style.display='inline-block';
+		}
+
+		function loginenable()
+		{
+			document.getElementById('id01').style.display='inline-block';
+		}
+
+    </script>
+
+
+
+    <body id="main-body">
+
+        <!--The header of the all the pages with all the styling in the main css file -->
+        <div class="header1">      
+                <a href="online.html">
+                    <p id="title"> <img src="../images/icon.jpg"  id="icon">VIT Cafe</p>
+                </a>
+        </div>
+
+
+        <!--The Navigation with links to three pages of the website under the class menu-bar.-->
+        <nav class="menu-bar" >
+            <a href="online.html">Home</a> &nbsp; &nbsp;
+            <a href="../PHPproj/logout.php">Hi <?php echo($_SESSION["username"]);?>, Logout</a> &nbsp; 
+        </nav>        
+
+
+        <!-- A DIv for the search bar, which is alligned to the center
+        <div class="main">
+            <form action="foodsearch.php" method="GET">
+                <input type="text" name="name" id="searchbar" placeholder="Search Here">
+                <br>
+                <input type="submit" id="submitbutton" value="submit">
+            </form>
+        </div>-->
+
+        
+		<div class="order-online">
+            <a href="menu.html"><button name="order-online" id="orderbutton" value="Order Online">Order Online</button></a>
+        </div>
+
+        
+        <!--The footer section for all pages with styling done in the main css file-->
+        <footer>
+
+        </footer>
+
+
+    </body>
+
+
+    
+</html>

@@ -1,0 +1,2 @@
+for($i=0;$i!=$_SESSION["totitem"];$i++){ echo($_SESSION["cart"][$i]["pname"]);}echo(<br>); echo("$_SESSION["totamt"]);
+for($i=0;$i!=$_SESSION["totitems"];$i++) {echo($_SESSION["cart"][$i]["pname"]);} echo("<br>"); echo($_SESSION["totamt"]);

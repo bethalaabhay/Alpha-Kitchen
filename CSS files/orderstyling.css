@@ -1,0 +1,56 @@
+.ordbox {
+	display: inline-block;
+	margin-left: 20px;
+	margin-right: 5px;
+	width: 265px;
+	height: 310px;
+	text-align:center;
+	border: 2px outset rgb(195, 22, 74);
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.ordimg {
+	border-radius: 10px;
+	height: 200px;
+	width: 265px;
+}
+
+.ordhead {
+	display: inline-block;
+	padding-top: 20px;
+	font-size: 50px;
+	font-family: "Bradley Hand ITC";
+	color: rgb(149, 7, 64);
+	padding-left: 20px;
+}
+
+.subhead {
+	font-size:30px;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+}
+
+.s1 {
+	font-size:20px;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+.ordsub {
+	display: inline-block;
+	float: right;
+	margin-top: 20px;
+	margin-right: 110px;
+	width: 150px;
+	height: 50px;
+	background-color: rgb(195, 22, 74);
+	color: white;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+.ordsub:hover {
+	cursor: pointer;
+}

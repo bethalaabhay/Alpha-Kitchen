@@ -1,0 +1,72 @@
+<html>
+
+
+    <head>
+		<meta charset="UTF-8">
+        <title>VIT Cafe</title>
+        <link rel="stylesheet" href="../CSS files/main.css">
+        <link rel="stylesheet" href="../CSS files/billstyling.css">
+        <?php session_start(); ?>
+    </head>
+
+
+    <body id="main-body" style="background-color: white;">
+
+        <!--The header of the all the pages with all the styling in the main css file -->
+        <div class="header1">      
+                <a href="online.html">
+                    <p id="title"> <img src="../images/icon.jpg"  id="icon">VIT Cafe</p>
+                </a>
+        </div>
+
+
+        <!--The Navigation with links to three pages of the website under the class menu-bar.-->
+        <nav class="menu-bar" >
+            <a href="online.html">Home</a> &nbsp; &nbsp;
+            <a href="../PHPproj/logout.php">Hi <?php echo($_SESSION["username"]);?>, Logout</a> &nbsp; 
+        </nav>  
+        
+        <center>
+            <p class="head1"><b>Your Bill</b></p>
+        </center>
+
+        <div class="ithead">
+            <p class="hname">Item Name</p>
+            <p class="hprice">Price</p>
+            <p class="hqty">Quantity</p>
+            <p class="hamt">Amount</p>
+        </div>
+
+        <br>
+        
+        <div id="items">
+               <?php 
+                    echo('<div class="singleit">');
+                    for($i=0;$i!=$_SESSION["totitems"];$i++) 
+                    {
+                        echo('<p class="itname">');
+                        echo($_SESSION['cart'][$i]['pname']);
+                        echo('</p>');
+                        echo('<p class="itprice">');
+                        echo($_SESSION['cart'][$i]['price']);
+                        echo('</p>');
+                        echo('<p class="itqty">');
+                        echo($_SESSION['cart'][$i]['qty']);
+                        echo('</p>');
+                        echo('<p class="itamt">');
+                        echo($_SESSION['cart'][$i]['amt']);
+                        echo('</p>');
+                        echo('<br>');
+                    }
+                    echo('</div>'); 
+                ?>
+        </div>
+
+        <center>
+            <p class="finamt"><b>Total Amount: <?php echo($_SESSION["totamt"]);?></b></p>
+        </center>
+
+	</body>
+	
+	
+</html>

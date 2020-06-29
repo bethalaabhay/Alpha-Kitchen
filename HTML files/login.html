@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>VIT Cafe</title>
+        <link rel="stylesheet" href="../CSS files/main.css">
+        <link rel="stylesheet" href="../CSS files/formstyling.css">
+		<link rel="stylesheet" href="../CSS files/signupstyling.css">
+		<?php session_start();?>
+    </head>
+
+
+    <script>
+
+		function signupenable()
+		{
+			document.getElementById('id01').style.display='none';
+			document.getElementById('id02').style.display='inline-block';
+		}
+
+		function loginenable()
+		{
+			document.getElementById('id01').style.display='inline-block';
+		}
+		
+		errormsg = "<?php if(isset($_SESSION['msg'])) echo($_SESSION['msg']); else echo('invalid');?>";
+		
+		if(errormsg!="invalid")
+		{
+			alert(errormsg);
+			"<?php $_SESSION['msg']='invalid'; ?>";
+		}
+    </script>
+
+
+
+    <body id="main-body">
+
+        
+		<!--The header of the all the pages with all the styling in the main css file -->
+        <div class="header1">      
+                <a href="login.html">
+                    <p id="title"> <img src="../images/icon.jpg"  id="icon">VIT Cafe</p>
+                </a>
+        </div>    
+        
+
+        <!--The Navigation with links to three pages of the website under the class menu-bar.-->
+        <nav class="menu-bar" >
+            <a href="login.html" >Home</a> &nbsp;  &nbsp; &nbsp;
+            <a id='login-link' onclick='loginenable()'> Login </a> &nbsp; &nbsp;  
+        </nav>        
+
+
+        <!-- A DIv for the search bar, which is alligned to the center
+        <div class="main">
+            <form action="foodsearch.php" method="GET">
+                <input type="text" name="name" id="searchbar" placeholder="Search Here">
+                <br>
+                <input type="submit" id="submitbutton" value="submit">
+            </form>
+        </div>-->
+
+        
+		<div class="order-online">
+            <button name="order-online" id="orderbutton" value="Order Online" onclick='loginenable()'>Order Online</button>
+        </div>
+        
+
+		<!-- The Form -->
+		<div id="id01" class="modal">
+		  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+		  <!-- Form Content -->
+		  <form name="loginform" action="../PHPproj/checklogin.php" method="POST">
+			<p align="center" style="font-size:20px; padding-top: 20px;"><b>Welcome To VIT Cafe</b></p>
+			<div class="container" align="center">
+			  <input class="boxbottom" type="text" name="uname" placeholder="Enter Username" required>
+			  <br><br>
+			  <input class="boxbottom" type="password" name="pwd" placeholder="Enter Password" required>
+			  <br><br>
+			  <button type="submit" class="logbut" name="submit"><b>Login</b></button>
+			  <br><br><br>
+			  <p onclick="signupenable()" id="si1"><u>New User? Sign Up Now!!</u></p>
+			</div>
+		  </form>
+		</div>
+		
+		
+		<!-- Signup Form -->
+		<div id="id02" class="modalsignup">
+		  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+		  
+		  <form name="signupform" action="../PHPproj/signup.php" method="POST">
+			<p align="center" style="font-size:20px; padding-top: 20px;"><b>Welcome To VIT Cafe</b></p>
+			<br>
+			<div class="containersignup" align="center">
+			  <p>Username:</p><input type="text" name="uname1" class="boxbot" required>
+			  <br><br>
+			  <p>Password:</p><input type="password" name="psw1" class="boxbot" required>
+			  <br><br>
+			  <p>Email:</p><input type="email" name="eid" class="boxbot" required>
+			  <br><br>
+			  <p>Phone:</p><input type="text" name="ph" class="boxbot" required>
+			  <br><br>
+			  <p>Address:</p><input type="text" name="addr" class="boxbot" required>
+			  <br><br><br>
+			  <button  type="submit" class="logbut">SignUp</button>
+			</div>
+		  </form>
+		</div>
+
+
+        
+        <!--The footer section for all pages with styling done in the main css file-->
+        <footer>
+
+        </footer>
+
+
+    </body>
+
+
+    
+</html>
